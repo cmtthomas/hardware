@@ -121,7 +121,7 @@ void loop() {
     //currently set up to cutdown at 20,000 m
     //alternatively use lat, lon, etc
     //5 cutdown attempts
-      if((lat > 46.214839) && (lat != 0) && (cutdown_trys < 5)){   //Max Lattitude (Assumed North)
+      if((lat < 46.214839) && (lat != 0) && (cutdown_trys < 5)){   //Max Lattitude (Assumed North)
         digitalWrite(trigger_out, HIGH);
         delay(15000);
         Serial.println("Cutdown");
